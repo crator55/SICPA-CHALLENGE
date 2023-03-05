@@ -2,7 +2,7 @@
 {
     public class EnterpriseCLS
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
         public string? Status { get; set; }
 
         public string? Address { get; set; }
