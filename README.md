@@ -2,7 +2,7 @@
 ## Installation
 1. Install Visual Studio 2022
 2. Install SQL Server
-3. Restore the Backup sicpa.back
+3. Restore the Backup sicpa.bak
 ## Documentation
 This app let you add new employees, departments and enterprises.
 You need to log-in to visualize the data.
