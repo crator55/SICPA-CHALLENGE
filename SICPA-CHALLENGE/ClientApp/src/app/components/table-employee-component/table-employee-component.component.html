@@ -1,0 +1,25 @@
+<a [routerLink]="['/employees','new']" class="btn btn-success">New</a>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th *ngFor="let head of headers">
+        {{head}}
+      </th>
+      <th>Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{employee.status}}</td>
+      <td>{{employee.age}}</td>
+      <td>{{employee.email}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.position}}</td>
+      <td>{{employee.surname}}</td>
+      <td>
+        <i [routerLink]="['/employees',employee.id]" class="fa-solid fa-pen-to-square btn btn-primary"></i>
+        <i class="fa-solid fa-trash btn btn-danger" (click)="DeleteEmployee(employee.id)"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>

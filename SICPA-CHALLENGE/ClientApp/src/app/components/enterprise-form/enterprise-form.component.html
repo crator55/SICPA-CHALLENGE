@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-12">
+    <form [formGroup]="enterprise" (ngSubmit)="Save()">
+      <div class="form-group">
+        <label>Status</label>
+        <select class="form-control" formControlName="Status">
+          <option value="true">Active</option>
+          <option value="false">Inactive</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="form-control" formControlName="Address" />
+      </div>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" formControlName="Name" />
+      </div>
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="text" class="form-control" formControlName="Phone" />
+      </div>
+      <div>
+        <input [disabled]="!enterprise.valid" type="submit" value="Save" class="btn btn-primary" />
+        <button [routerLink]="['/enterprises']" class="btn btn-danger">Back</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div style="margin:1em" *ngIf="enterprise.valid==false">
+  <div class="alert alert-danger">This form is not valid,verify if all fields are not empty</div>
+</div>
+

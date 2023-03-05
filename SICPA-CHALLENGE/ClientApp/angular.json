@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "SICPA_CHALLENGE"
+  "defaultProject": "SICPA_CHALLENGE",
+  "cli": {
+    "analytics": false
+  }
 }

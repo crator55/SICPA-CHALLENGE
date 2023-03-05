@@ -1,0 +1,23 @@
+<a [routerLink]="['/enterprises','new']" class="btn btn-success">New</a>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th *ngFor="let head of headers">
+        {{head}}
+      </th>
+      <th>Operations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let enterprise of enterprises">
+      <td>{{enterprise.status}}</td>
+      <td>{{enterprise.address}}</td>
+      <td>{{enterprise.name}}</td>
+      <td>{{enterprise.phone}}</td>
+      <td>
+        <i [routerLink]="['/enterprises',enterprise.id]" class="fa-solid fa-pen-to-square btn btn-primary"></i>
+        <i class="fa-solid fa-trash btn btn-danger" (click)="DeleteEnterprise(enterprise.id)"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
