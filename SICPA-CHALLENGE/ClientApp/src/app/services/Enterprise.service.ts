@@ -7,10 +7,8 @@ import { HttpClient } from '@angular/common/http';
 )
 export class EnterpriseService{
   urlBase: string = "";
-  server: string = "https://localhost:44400/";
   constructor(private HttpClient: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     this.urlBase = baseUrl;
-
   }
   public getEnterprise() {
     return this.HttpClient.get(this.urlBase + "api/Enterprise/ListEnterprise");

@@ -12,10 +12,8 @@ type Department = {
 )
 export class DepartmentService{
   urlBase: string = "";
-  server: string = "https://localhost:44400/";
   constructor(private HttpClient: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     this.urlBase = baseUrl;
-    console.log(baseUrl)
   }
 
   public getDepartment() {
@@ -34,6 +32,6 @@ export class DepartmentService{
     return this.HttpClient.put(this.urlBase + "api/Department/EditDepartment/"+id, department)
   }
   public DeleteDepartment(id:string) {
-    return this.HttpClient.delete(this.server + "api/Department/DeleteDepartment/" + id)
+    return this.HttpClient.delete(this.urlBase + "api/Department/DeleteDepartment/" + id)
   }
 }
